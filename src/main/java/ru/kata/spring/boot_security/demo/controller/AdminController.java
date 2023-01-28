@@ -89,8 +89,8 @@ public class AdminController {
         User user = userService.findById(id);
         user.setRoles(roles);
         user.setUsername(username);
-        user.setLastname(lastname);
         user.setEmail(email);
+        user.setLastname(lastname);
         user.setPassword(password);
         userService.saveUser(user);
         return "redirect:/admin/users";

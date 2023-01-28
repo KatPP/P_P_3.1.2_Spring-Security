@@ -59,7 +59,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     }
 
     @Override
-    @org.springframework.transaction.annotation.Transactional
+    @Transactional
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
         return userRepository.findByUsername(login);
     }
